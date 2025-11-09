@@ -1,6 +1,6 @@
 import {createContext,useEffect,useState} from 'react'
 import axios from 'axios'
-import {jwtDecode} from 'jwt-decode'
+import jwtDecode from 'jwt-decode'
 export const AuthContext= createContext();
 
 export const AuthProvider=({children})=>{
@@ -37,7 +37,7 @@ export const AuthProvider=({children})=>{
     }
 
     const logout=async()=>{
-        await axios.post('http://localhost:5000/auth/logout',{},{withCredentials:true})
+        await axios.post(`${process.env.REACT_APP_API_URL}/auth/logout`, {}, { withCredentials: true });
         setUser(null)
         setAccessToken(null);
     }
