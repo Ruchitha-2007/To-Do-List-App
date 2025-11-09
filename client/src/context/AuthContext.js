@@ -18,7 +18,7 @@ export const AuthProvider=({children})=>{
         if(window.location.pathname==='/login') return;
         const refresh=async()=>{
             try{
-                const res=await axios.get('http://localhost:5000/auth/refresh',{
+                const res=await axios.get(`${process.env.REACT_APP_API_URL}/auth/refresh`,{
                     withCredentials:true
                 })
                 setAccessToken(res.data.accessToken);
