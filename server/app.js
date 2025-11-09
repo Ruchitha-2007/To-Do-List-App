@@ -8,12 +8,10 @@ const authRoute=require('./routes/authRoute')
 
 connectDB();
 app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        'https://to-do-list-app-seven-ivory.vercel.app/'
-    ]  , 
-    credentials:true
-}))
+    origin: '*',
+    credentials: true
+}));
+
 
 app.use(express.json());
 app.use(cookieParser());
