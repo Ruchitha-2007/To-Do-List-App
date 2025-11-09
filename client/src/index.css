@@ -1,0 +1,910 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #2b2b52, #1e1e2f);
+  color: #fff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo container and logo */
+.nav-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-logo:hover {
+  color: #4fd1c5;
+}
+
+/* Navbar links (left side) */
+.navbar-left {
+  display: flex;
+  gap: 20px;
+}
+
+.link-to-abt,
+.link-to-contact,
+.link-to-home {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.link-to-abt:hover,
+.link-to-contact:hover,
+.link-to-home:hover {
+  color: #4fd1c5;
+  transform: translateY(-2px);
+}
+
+/* Navbar right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-right a:hover {
+  color: #4fd1c5;
+  transform: translateY(-2px);
+}
+
+/* Greeting text */
+.navbar-right span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Logout button */
+.nav-btn {
+  background: #4fd1c5;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #38b2ac;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 16px;
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-btn {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+
+.about-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b52);
+  min-height: 100vh;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.about-container {
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4fd1c5;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+}
+
+.about-features {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.features-title {
+  color: #4fd1c5;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: #dcdcdc;
+  padding-left: 10px;
+  position: relative;
+}
+
+.about-footer {
+  margin-top: 30px;
+  font-style: italic;
+  color: #cfcfcf;
+}
+
+.highlight {
+  color: #4fd1c5;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 25px 20px;
+  }
+
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .features-title {
+    font-size: 1.1rem;
+  }
+}
+
+
+.contact-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b52);
+  min-height: 100vh;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.contact-container {
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4fd1c5;
+}
+
+.contact-text {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.contact-details {
+  margin: 25px 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contact-number {
+  font-size: 1.3rem;
+  color: #4fd1c5;
+  margin-bottom: 8px;
+}
+
+.contact-email {
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+.contact-home-link {
+  display: inline-block;
+  margin-top: 25px;
+  color: #4fd1c5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-home-link:hover {
+  color: #38b2ac;
+  transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 25px 20px;
+  }
+
+  .contact-title {
+    font-size: 1.7rem;
+  }
+
+  .contact-text {
+    font-size: 0.95rem;
+  }
+
+  .contact-number {
+    font-size: 1.15rem;
+  }
+}
+
+
+/* Overall form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b52);
+  padding: 40px 20px;
+  color: #fff;
+}
+
+/* Heading */
+.login-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4fd1c5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Email and password inputs */
+.login-email-input,
+.login-password-input {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.login-email-input::placeholder,
+.login-password-input::placeholder {
+  color: #b0b0b0;
+}
+
+.login-email-input:focus,
+.login-password-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #4fd1c5;
+  box-shadow: 0 0 5px #4fd1c5;
+}
+
+/* Login button */
+.login-form-btn {
+  background: #4fd1c5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 350px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-form-btn:hover {
+  background: #38b2ac;
+  transform: scale(1.05);
+}
+
+/* Sign up section */
+.login-form-div {
+  margin-top: 20px;
+}
+
+.login-form-signup {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.login-form-signup a {
+  color: #4fd1c5;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.login-form-signup a:hover {
+  color: #38b2ac;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .login-heading {
+    font-size: 1.7rem;
+  }
+
+  .login-email-input,
+  .login-password-input,
+  .login-form-btn {
+    max-width: 90%;
+  }
+}
+
+
+/* Overall form styling */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2b2b52);
+  padding: 40px 20px;
+  color: #fff;
+}
+
+/* Heading */
+.signup-form-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4fd1c5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Input fields */
+.signup-form-name,
+.signup-form-email,
+.signup-form-password {
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.signup-form-name::placeholder,
+.signup-form-email::placeholder,
+.signup-form-password::placeholder {
+  color: #b0b0b0;
+}
+
+.signup-form-name:focus,
+.signup-form-email:focus,
+.signup-form-password:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #4fd1c5;
+  box-shadow: 0 0 5px #4fd1c5;
+}
+
+/* Button */
+.signup-form-btn {
+  background: #4fd1c5;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 350px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.signup-form-btn:hover {
+  background: #38b2ac;
+  transform: scale(1.05);
+}
+
+/* Login link section */
+.signup-form-div {
+  margin-top: 20px;
+}
+
+.signup-form-login {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.signup-form-login a {
+  color: #4fd1c5;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.signup-form-login a:hover {
+  color: #38b2ac;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .signup-form-heading {
+    font-size: 1.7rem;
+  }
+
+  .signup-form-name,
+  .signup-form-email,
+  .signup-form-password,
+  .signup-form-btn {
+    max-width: 90%;
+  }
+}
+
+
+/* General Page Styling */
+.Home-div {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+}
+
+/* Heading */
+.Home-heading {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #111827;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Sub text when no posts are available */
+.Home-heading-para {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+/* Search and Add Post form */
+.Home-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Search input */
+.Home-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  width: 240px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.Home-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Buttons */
+.search-button,
+.addPost-button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Search button styling */
+.search-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.search-button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Add Post button styling */
+.addPost-button {
+  background-color: #10b981;
+  color: white;
+}
+
+.addPost-button:hover {
+  background-color: #059669;
+  transform: translateY(-2px);
+}
+
+/* Each post card */
+.Home-div > .Home-div {
+  background: white;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.Home-div > .Home-div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Post title */
+.home-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+/* Post content */
+.home-content {
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Edit and Delete buttons */
+.home-edit-content,
+.Home-link-delete-btn button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Edit button */
+.home-edit-content {
+  background-color: #6366f1;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.home-edit-content:hover {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+}
+
+/* Delete button */
+.Home-link-delete-btn button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.Home-link-delete-btn button:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* When user not logged in */
+.Home-div-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background: #f3f4f6;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.Home-div-login-heading {
+  color: #1f2937;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.Home-div-login-link,
+.Home-div-link-signup {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Home-div-login-link:hover,
+.Home-div-link-signup:hover {
+  text-decoration: underline;
+}
+
+
+/* =============== NewPost Page Styles =============== */
+
+.newpost-div {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f0f4f8, #dce3e8);
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.newpost-form {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.newpost-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.newpost-label-title,
+.newpost-label-content {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.newpost-title,
+.newpost-content {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  background-color: #f9fafb;
+  transition: all 0.2s ease-in-out;
+}
+
+.newpost-title:focus,
+.newpost-content:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.newpost-content {
+  height: 160px;
+  resize: none;
+}
+
+.newpost-form-btn {
+  margin-top: 1.8rem;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  color: white;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.newpost-form-btn:hover {
+  background: linear-gradient(135deg, #0056d2, #003ea8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Smooth focus transitions */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .newpost-form {
+    padding: 2rem;
+  }
+}
+
+
+/* =================== EditPost Page Styles =================== */
+
+.edit-div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f8fa, #e2e8f0);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+}
+
+.edit-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.edit-form {
+  background: #ffffff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.edit-form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.edit-label-title,
+.edit-label-content {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.edit-input-title,
+.edit-input-content {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  background-color: #f9fafb;
+  transition: all 0.2s ease-in-out;
+}
+
+.edit-input-title:focus,
+.edit-input-content:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+.edit-input-content {
+  height: 160px;
+  resize: none;
+}
+
+.edit-form-btn {
+  margin-top: 1.8rem;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007bff, #0056d2);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit-form-btn:hover {
+  background: linear-gradient(135deg, #0056d2, #003ea8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.3);
+}
+
+/* Make spacing smoother */
+br {
+  display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .edit-form {
+    padding: 2rem;
+  }
+
+  .edit-heading {
+    font-size: 1.6rem;
+  }
+}
